@@ -128,9 +128,6 @@ public class ConsolaOlimpicos
 	private void ejecutarModificación() {
 		String nombre = input("Por favor ingrese el nombre del atleta.");
 		Atleta buscando = calculadora.buscarAtleta(nombre);
-		if (buscando == null) {
-			System.out.println(buscando);
-		};
 	}
 	private void ejecutarMedallistasPorNacionYGenero()
 	{
