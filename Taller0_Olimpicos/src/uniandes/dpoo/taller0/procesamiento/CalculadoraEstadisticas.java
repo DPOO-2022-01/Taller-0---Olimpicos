@@ -417,8 +417,17 @@ public class CalculadoraEstadisticas
 	 * @param nombreAtleta El nombre del atleta que se est√° buscando
 	 * @return El atleta con el nombre dado o null si no se encuentra.
 	 */
-	public Atleta buscarAtleta(String nombreAtleta)
+	private Atleta buscarAtleta(String nombreAtleta)
 	{
+		Atleta elAtleta = null;
+		for (int i = 0; i < atletas.size() && elAtleta == null; i++)
+		{
+			if (atletas.get(i).darNombre().equals(nombreAtleta))
+				elAtleta = atletas.get(i);
+		}
+		return elAtleta;
+	}
+	public Pais buscarPaisAtleta(String nombreAtleta) {
 		Atleta elAtleta = null;
 		Pais elPais = null;
 		for (int i = 0; i < atletas.size() && elAtleta == null; i++)
@@ -427,8 +436,7 @@ public class CalculadoraEstadisticas
 				elAtleta = atletas.get(i);
 				elPais = atletas.get(i).darPais();
 		}
-		System.out.println("El paÌs del atleta es: " + elPais.darNombre());
-		return elAtleta;
+		return elPais;
 	}
 
 	/**

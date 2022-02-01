@@ -10,6 +10,7 @@ import java.util.Map;
 
 import uniandes.dpoo.taller0.modelo.Atleta;
 import uniandes.dpoo.taller0.modelo.Genero;
+import uniandes.dpoo.taller0.modelo.Pais;
 import uniandes.dpoo.taller0.procesamiento.CalculadoraEstadisticas;
 import uniandes.dpoo.taller0.procesamiento.LoaderOlimpicos;
 
@@ -127,7 +128,8 @@ public class ConsolaOlimpicos
 	 */
 	private void ejecutarModificación() {
 		String nombre = input("Por favor ingrese el nombre del atleta.");
-		Atleta buscando = calculadora.buscarAtleta(nombre);
+		Pais buscando = calculadora.buscarPaisAtleta(nombre);
+		System.out.println("El país del atleta es: " + buscando.darNombre());
 	}
 	private void ejecutarMedallistasPorNacionYGenero()
 	{
